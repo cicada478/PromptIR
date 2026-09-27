@@ -1,0 +1,50 @@
+{
+  "subject": {
+    "count": 1,
+    "type": "person",
+    "gender": "female",
+    "age": "adult",
+    "ethnicity": "East Asian"
+  },
+  "appearance": {
+    "face": "delicate facial features",
+    "skin": "fair smooth skin",
+    "body": "slender figure",
+    "hair": {"color": "black", "length": "long", "texture": "softly wavy"},
+    "expression": "calm expression"
+  },
+  "wardrobe": {
+    "style": "Dunhuang-inspired",
+    "garment": "flowing layered silk dress",
+    "materials": ["silk", "light chiffon"],
+    "colors": ["turquoise", "ochre red", "gold"],
+    "details": ["flowing ribbons", "delicate embroidery"],
+    "accessories": ["ornate golden headdress", "long golden earrings"]
+  },
+  "composition": {
+    "shot": "full-body portrait",
+    "subject_position": "centered",
+    "pose": "graceful standing pose",
+    "orientation": "facing the camera",
+    "layout": "single-subject composition"
+  },
+  "environment": {
+    "location": "minimal photography studio",
+    "background": "warm beige seamless background",
+    "props": [],
+    "atmosphere": "refined atmosphere"
+  },
+  "lighting": {
+    "type": "soft cinematic studio lighting",
+    "direction": "frontal and side light",
+    "contrast": "gentle contrast",
+    "temperature": "warm tones",
+    "effects": ["soft shadows", "subtle rim light"]
+  },
+  "camera": {"lens": "85mm", "angle": "eye-level view", "depth_of_field": "shallow"},
+  "aesthetic": {
+    "genre": ["cinematic portrait", "fashion editorial"],
+    "mood": ["elegant", "ethereal"]
+  },
+  "negative": ["blurry", "extra fingers", "text", "watermark"]
+}

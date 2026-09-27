@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Prompt IR v1",
+  "type": "object",
+  "required": ["subject"],
+  "additionalProperties": false,
+  "properties": {
+    "subject": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "count": {"type": "integer", "minimum": 1},
+        "type": {"$ref": "#/$defs/text"},
+        "gender": {"$ref": "#/$defs/text"},
+        "age": {"$ref": "#/$defs/text"},
+        "ethnicity": {"$ref": "#/$defs/text"},
+        "identity": {"$ref": "#/$defs/text"}
+      }
+    },
+    "appearance": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "face": {"$ref": "#/$defs/text"}, "skin": {"$ref": "#/$defs/text"},
+        "body": {"$ref": "#/$defs/text"}, "expression": {"$ref": "#/$defs/text"},
+        "hair": {
+          "type": "object", "additionalProperties": false,
+          "properties": {
+            "color": {"$ref": "#/$defs/text"}, "length": {"$ref": "#/$defs/text"},
+            "texture": {"$ref": "#/$defs/text"}, "style": {"$ref": "#/$defs/text"}
+          }
+        }
+      }
+    },
+    "wardrobe": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "style": {"$ref": "#/$defs/text"}, "garment": {"$ref": "#/$defs/text"},
+        "materials": {"$ref": "#/$defs/strings"}, "colors": {"$ref": "#/$defs/strings"},
+        "details": {"$ref": "#/$defs/strings"}, "accessories": {"$ref": "#/$defs/strings"}
+      }
+    },
+    "composition": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "shot": {"$ref": "#/$defs/text"}, "subject_position": {"$ref": "#/$defs/text"},
+        "pose": {"$ref": "#/$defs/text"}, "orientation": {"$ref": "#/$defs/text"},
+        "layout": {"$ref": "#/$defs/text"}, "negative_space": {"$ref": "#/$defs/text"}
+      }
+    },
+    "environment": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "location": {"$ref": "#/$defs/text"}, "background": {"$ref": "#/$defs/text"},
+        "props": {"$ref": "#/$defs/strings"}, "atmosphere": {"$ref": "#/$defs/text"}
+      }
+    },
+    "lighting": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "type": {"$ref": "#/$defs/text"}, "direction": {"$ref": "#/$defs/text"},
+        "contrast": {"$ref": "#/$defs/text"}, "temperature": {"$ref": "#/$defs/text"},
+        "effects": {"$ref": "#/$defs/strings"}
+      }
+    },
+    "camera": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "lens": {"$ref": "#/$defs/text"}, "angle": {"$ref": "#/$defs/text"},
+        "depth_of_field": {"$ref": "#/$defs/text"}
+      }
+    },
+    "aesthetic": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "genre": {"$ref": "#/$defs/strings"}, "mood": {"$ref": "#/$defs/strings"},
+        "style": {"oneOf": [{"$ref": "#/$defs/text"}, {"$ref": "#/$defs/strings"}]},
+        "details": {"$ref": "#/$defs/strings"}
+      }
+    },
+    "negative": {"$ref": "#/$defs/strings"}
+  },
+  "$defs": {
+    "text": {"type": ["string", "null"]},
+    "strings": {"type": "array", "items": {"type": "string"}}
+  }
+}
